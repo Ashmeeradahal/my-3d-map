@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My 3D City Map</title>
+    <style>
+      html, body, #cesiumContainer {
+        margin: 0; padding: 0;
+        width: 100%; height: 100%;
+        overflow: hidden;
+      }
+
+      /* Toolbar with the three buttons, floating top-left over the globe */
+      #toolbar {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+        display: flex;
+        gap: 8px;
+      }
+      #toolbar button {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 6px;
+        background: rgba(40, 40, 40, 0.85);
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      #toolbar button:hover {
+        background: rgba(0, 120, 215, 0.9);
+      }
+
+      /* Info box that appears when a building is clicked */
+      #infoBox {
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        z-index: 1;
+        background: rgba(40, 40, 40, 0.85);
+        color: white;
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-family: sans-serif;
+        font-size: 13px;
+        display: none;            /* hidden until a building is clicked */
+        max-width: 280px;
+        line-height: 1.5;
+      }
+	#legend {
+	  position: absolute;
+	  bottom: 40px;          /* sits above the Cesium credit line */
+	  right: 10px;
+	  z-index: 1;
+	  background: rgba(40, 40, 40, 0.85);
+	  color: white;
+	  padding: 10px 14px;
+	  border-radius: 6px;
+	  font-family: sans-serif;
+	  font-size: 13px;
+	  display: none;          /* hidden until coloring is switched on */
+	}
+	#legend .row {
+	  display: flex;
+	  align-items: center;
+	  gap: 8px;
+	  margin-top: 6px;
+	}
+	#legend .swatch {
+	  width: 16px;
+	  height: 16px;
+	  border-radius: 3px;
+	  display: inline-block;
+	}
+    </style>
+  </head>
+  <body>
+    <div id="cesiumContainer"></div>
+
+    <div id="toolbar">
+      <button id="basemapBtn">🗺️ Show Topo Map (WMS)</button>
+      <button id="buildingsBtn">🏠 Hide Buildings</button>
+      <button id="colorBtn">🎨 Color by Height</button>
+    </div>
+
+    <div id="infoBox"></div>
+	<div id="legend">
+	  <b>Building height</b>
+	  <div class="row"><span class="swatch" style="background:#d73027"></span> ≥ 50 m</div>
+	  <div class="row"><span class="swatch" style="background:#fc8d59"></span> 25 – 50 m</div>
+	  <div class="row"><span class="swatch" style="background:#fee08b"></span> 10 – 25 m</div>
+	  <div class="row"><span class="swatch" style="background:#d9ef8b"></span> &lt; 10 m</div>
+	</div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
