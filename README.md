@@ -1,4 +1,4 @@
-# 🌍 3D City Map — CesiumJS + Vite
+# 🌍 3D City Map - CesiumJS + Vite
 
 An interactive 3D web map displaying real CityGML LoD2 buildings on a virtual globe.
 
@@ -26,7 +26,7 @@ npm run dev
 
 Then open `http://localhost:5173/my-3d-map/`.
 
-> **Note:** `src/main.js` requires a Cesium Ion access token and asset ID (see the CREDENTIALS section at the top of the file).
+> **Note:** `src/main.js` requires a Cesium Ion access token and asset ID.
 
 ## Data sources & credits
 
