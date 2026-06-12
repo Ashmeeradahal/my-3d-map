@@ -2,18 +2,18 @@
 
 An interactive 3D web map displaying real CityGML LoD2 buildings on a virtual globe.
 
-**🔴 Live demo:** https://ashmeeradahal.github.io/my-3d-map/
+** Live demo:** https://ashmeeradahal.github.io/my-3d-map/
 
 ![Screenshot](screenshot.png)
 
 ## Features
 
-- **3D buildings** — CityGML LoD2 dataset from the [Baden-Württemberg open geodata portal](https://opengeodata.lgl-bw.de/), converted to 3D Tiles with Cesium Ion and clamped to terrain
-- **Cesium World Terrain** — buildings stand on real elevation data
-- **WMS basemap** — switchable TopPlusOpen topographic map (© Bundesamt für Kartographie und Geodäsie)
-- **Height-based coloring** — buildings colored by height, with a map legend
-- **Building info on click** — shows the building ID and height from CityGML attributes
-- **Real-time shadows** — drag the timeline to change the sun position
+- **3D buildings** : CityGML LoD2 dataset from the [Baden-Württemberg open geodata portal](https://opengeodata.lgl-bw.de/), converted to 3D Tiles with Cesium Ion and clamped to terrain
+- **Cesium World Terrain** : buildings stand on real elevation data
+- **WMS basemap** : switchable TopPlusOpen topographic map (© Bundesamt für Kartographie und Geodäsie)
+- **Height-based coloring** : buildings colored by height, with a map legend
+- **Building info on click** : shows the building ID and height from CityGML attributes
+- **Real-time shadows** : drag the timeline to change the sun position
 
 ## Run locally
 
